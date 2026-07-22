@@ -6,9 +6,7 @@ The platform provides a LeetCode-style environment where users can solve coding 
 
 AlgoSphere aims to provide an interactive learning experience by combining problem-solving practice, coding challenges, performance analysis, and developer-focused tools to help users become better programmers.
 
-## About Project
 
-AlgoSphere is a LeetCode-style platform where developers can practice Data Structures and Algorithms problems, solve coding challenges, and improve their problem-solving skills.
 
 ## Tech Stack
 
