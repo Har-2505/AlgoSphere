@@ -1,6 +1,10 @@
 # AlgoSphere 🚀
 
-A coding practice and interview preparation platform.
+AlgoSphere is a comprehensive coding practice and interview preparation platform designed to help developers improve their Data Structures and Algorithms skills.
+
+The platform provides a LeetCode-style environment where users can solve coding problems, practice programming concepts, track their progress, and prepare for technical interviews.
+
+AlgoSphere aims to provide an interactive learning experience by combining problem-solving practice, coding challenges, performance analysis, and developer-focused tools to help users become better programmers.
 
 ## About Project
 
