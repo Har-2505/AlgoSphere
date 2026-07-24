@@ -38,19 +38,6 @@ AlgoSphere/
 └── .gitignore
 ```
 
-## Development Progress
-
-### Day 1
-
-Completed:
-- Created project folder structure
-- Setup Node.js and Express.js backend
-- Configured environment variables
-- Added MongoDB configuration setup
-- Created client and server folders
-- Added `.gitignore` file
-- Initialized GitHub repository
-
 ## Author
 
 Harshit Srivastav Kumar
