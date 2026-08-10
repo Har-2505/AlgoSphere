@@ -73,6 +73,52 @@ graph TD
 
 ---
 
+## 📂 Project Structure
+
+Below is the directory tree mapping showing the file structure of both the `client` and `server` folders in **AlgoSphere**:
+
+```text
+AlgoSphere/
+├── client/                     # Frontend Application (React)
+│   ├── public/                 # Static public assets
+│   └── src/
+│       ├── assets/             # Images and styles assets
+│       ├── components/         # Reusable UI widgets
+│       │   ├── AdminUpdate.jsx # Problem update dashboard view
+│       │   ├── ChatAi.jsx      # Gemini/ChatGPT-style coding helper
+│       │   └── SubmissionHistory.jsx # Submissions list & code preview
+│       ├── pages/              # Main route views
+│       │   ├── Home.jsx        # Dashboard problem lobby
+│       │   ├── Leaderboard.jsx # Podium rankings table
+│       │   ├── Login.jsx       # Authentication access
+│       │   ├── ProblemPage.jsx # Code editor workspace & compiler
+│       │   ├── Profile.jsx     # Concentric progress rings & heatmap
+│       │   └── Signup.jsx      # Guest registration portal
+│       ├── App.jsx             # Main Router navigation mapping
+│       ├── index.css           # Global stylesheets & Light overrides
+│       └── main.jsx            # Entry point render
+├── server/                     # Backend API Server (Node.js & Express)
+│   └── src/
+│       ├── config/             # Database connection setups
+│       │   ├── db.js           # Mongoose MongoDB connection
+│       │   └── redis.js        # Redis cache configuration
+│       ├── controllers/        # Route query controllers
+│       │   ├── userAuth.js     # User registration/login controllers
+│       │   └── userProblem.js  # Solved counters, heatmaps, & ranking
+│       ├── Models/             # Mongoose schemas
+│       │   ├── problem.js      # Code templates & test cases schema
+│       │   ├── submission.js   # User submission records schema
+│       │   └── user.js         # Score, solved list, & avatar schema
+│       ├── routes/             # API routing channels
+│       │   ├── userAuth.js     # Auth route endpoints
+│       │   └── problemCreator.js # Practice playground route endpoints
+│       └── index.js            # Main backend entry point
+├── .gitignore                  # Git untracked files setup
+└── README.md                   # Project documentation
+```
+
+---
+
 ## ⚙️ Installation & Local Setup
 
 ### 1. Clone the repository
