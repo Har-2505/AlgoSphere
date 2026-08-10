@@ -156,6 +156,60 @@ AlgoSphere exposes the following backend REST API endpoints:
 
 ---
 
+## 🗄️ Database Schema & ER Diagram
+
+Below is the Entity Relationship (ER) diagram representing the MongoDB collections and schemas used in **AlgoSphere**:
+
+```mermaid
+erDiagram
+    USER ||--o{ SUBMISSION : submits
+    PROBLEM ||--o{ SUBMISSION : has
+    PROBLEM ||--o| SOLUTION_VIDEO : has
+    USER ||--o{ PROBLEM : solves
+
+    USER {
+        ObjectId id PK
+        string firstName
+        string emailId
+        string password
+        ObjectIdArray problemSolved FK
+        number points
+    }
+
+    PROBLEM {
+        ObjectId id PK
+        string title
+        string dscription
+        string difficultylevel
+        string tag
+        objectArray visibleTestCases
+        objectArray hiddenTestCases
+        objectArray startcode
+        objectArray refrenceSolution
+    }
+
+    SUBMISSION {
+        ObjectId id PK
+        ObjectId userId FK
+        ObjectId problemId FK
+        string code
+        string language
+        string status
+        number runtime
+        number memory
+        date createdAt
+    }
+
+    SOLUTION_VIDEO {
+        ObjectId id PK
+        ObjectId problemId FK
+        string secureUrl
+        string cloudinaryPublicId
+    }
+```
+
+---
+
 ## 📂 Project Structure
 
 Below is the directory tree mapping showing the file structure of both the `client` and `server` folders in **AlgoSphere**:
