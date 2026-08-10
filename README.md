@@ -125,6 +125,37 @@ graph TD
 
 ---
 
+## 🔌 API Documentation
+
+AlgoSphere exposes the following backend REST API endpoints:
+
+### 🔐 1. Authentication (`/user`)
+* `POST /user/register` - Registers a new developer account.
+* `POST /user/login` - Authenticates user credentials and sets a secure `httpOnly` JWT cookie.
+* `GET /user/profile` - Fetches profile metadata of the currently authenticated session.
+* `GET /user/logout` - Clears the JWT session cookie and terminates the connection.
+
+### 📝 2. Practice Lobby & Leaderboard (`/problem`)
+* `GET /problem/getAllProblem` - Retrieves all programming challenges with metadata and solved tallies.
+* `GET /problem/problemById/:id` - Fetches complete problem schema, including start codes and test cases.
+* `GET /problem/profileStats` - Retrieves circular rings stats, streaks tally, and the 365-day submission heatmap.
+* `GET /problem/leaderboard` - Returns gold/silver/bronze podium lists and points standings of all developers.
+* `PUT /problem/update/:id` - Admins update a challenge details, visible/hidden cases, and templates.
+
+### ⚙️ 3. Execution & Submissions (`/submission`)
+* `POST /submission/run` - Evaluates source code sandboxes against visible examples (returns stdout / runtime).
+* `POST /submission/submit` - Evaluates code against hidden test cases. If successful, creates a submission log, updates user solved array, and recalculates point metrics.
+* `GET /submission/history/:problemId` - Returns the logged-in user's submission history and source code copies.
+
+### 🤖 4. AI Chat Companion (`/ai`)
+* `POST /ai/chat` - Connects the workspace chat console with the Gemini API to debug and explain coding constraints.
+
+### 📹 5. Video Editorials (`/video`)
+* `POST /video/upload` - Signed upload channel mapping solution videos directly to Cloudinary.
+* `GET /video/solutions/:problemId` - Retrieves stream URLs for editorial walkthrough players.
+
+---
+
 ## 📂 Project Structure
 
 Below is the directory tree mapping showing the file structure of both the `client` and `server` folders in **AlgoSphere**:
