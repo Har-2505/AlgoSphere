@@ -12,7 +12,7 @@ if(!IsAllowed)
 if(!validator.isEmail(data.emailId))
     throw new Error("Invalid Email");
 
-if(!validator.isStrongPassword(data.password))
-    throw new Error("Weak Password");
+if(data.password.length < 6)
+    throw new Error("Password must be at least 6 characters long");
 }
 module.exports=validate;

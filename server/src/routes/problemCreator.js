@@ -10,7 +10,9 @@ const {
     getProblemBiId,
     getAllProblem,
     solvedAllProblembyUser,
-    submittedProblem
+    submittedProblem,
+    getProfileStats,
+    getLeaderboard
 } = require("../controllers/userProblem");
 
 problemRouter.post('/create',adminMiddleware,createProblem);
@@ -20,6 +22,8 @@ problemRouter.delete('/delete/:id',adminMiddleware,deleteProblem);
 
 problemRouter.get('/problemById/:id',userMiddleware,getProblemBiId);
 problemRouter.get('/getAllProblem',userMiddleware,getAllProblem);
+problemRouter.get('/profileStats',userMiddleware,getProfileStats);
+problemRouter.get('/leaderboard',userMiddleware,getLeaderboard);
 problemRouter.get('/problemSolvedByUser',userMiddleware,solvedAllProblembyUser);
 problemRouter.get('/submittedProblem/:pid',userMiddleware,submittedProblem);
 module.exports=problemRouter;

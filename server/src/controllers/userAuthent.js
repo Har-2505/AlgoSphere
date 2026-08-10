@@ -13,9 +13,18 @@ const register=async(req,res)=>{
        req.body.role='user',
        req.body.password = await bcrypt.hash(password,10);
        const user=await User.create(req.body);
+       const reply={
+  firstName:user.firstName,
+  emailId:user.emailId,
+  _id:user._id,
+  role:user.role
+}
    const token=jwt.sign({_id:user.id , emailId:emailId,role:'user'},process.env.JWT_KEY,{expiresIn:60*60});
    res.cookie('token',token,{maxAge:60*60*1000});
-   res.status(201).send("User Register Successfully");
+   res.status(201).json({
+     user:reply,
+     message:"User Register Successfully"
+   });
       
     }
     catch(err){
@@ -38,17 +47,28 @@ if (!user) {
   if(!match)
     throw new Error("Invalid Credentials")
   
+const reply={
+  firstName:user.firstName,
+  emailId:user.emailId,
+  _id:user._id,
+  role:user.role
+}
+
+
  const token=jwt.sign({_id:user.id , emailId:emailId,role:user.role},process.env.JWT_KEY,{expiresIn:60*60});
    res.cookie('token',token,{maxAge:60*60*1000});
-res.status(200).send("Login Successfullly");
+res.status(201).json({
+  user:reply,
+  message:"Login Successfully"
+})
   }
   catch(err){
 res.status(401).send("Error: "+ err);
   }
 }
-const lagout = async(req,res)=>{
+const logout = async(req,res)=>{
   try{
-
+    
     const {token} = req.cookies;
 
     if(!token){
@@ -107,6 +127,6 @@ res.status(500).send("Internal Server Error");
 }
 
 
-module.exports={register,login,lagout,adminRegister,deleteProfile};
+module.exports={register,login,logout,adminRegister,deleteProfile};
 
 

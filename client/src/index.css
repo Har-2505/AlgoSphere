@@ -1,0 +1,131 @@
+@import "tailwindcss";
+@plugin "daisyui";
+
+/* Light Theme Global Override System */
+html.light,
+html.light body,
+html.light .min-h-screen,
+html.light .h-screen {
+  background-color: #f8fafc !important;
+  color: #0f172a !important;
+}
+
+/* Background glows */
+html.light [class*="bg-purple-900/10"],
+html.light [class*="bg-indigo-900/10"],
+html.light [class*="bg-purple-500/5"] {
+  background-color: rgba(99, 102, 241, 0.05) !important;
+}
+
+/* Navbar & Glassmorphic Containers */
+html.light nav,
+html.light .tabs,
+html.light .bg-zinc-900\/30,
+html.light .bg-zinc-900\/20,
+html.light .bg-zinc-950\/60,
+html.light .bg-zinc-950\/20,
+html.light .bg-zinc-950\/10,
+html.light .bg-zinc-900\/10 {
+  background-color: rgba(255, 255, 255, 0.75) !important;
+  backdrop-filter: blur(16px) !important;
+  border-color: rgba(226, 232, 240, 0.8) !important;
+  color: #334155 !important;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03) !important;
+}
+
+/* Monaco Editor Container and Inner Panels */
+html.light .bg-zinc-950,
+html.light .bg-zinc-950\/65 {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+}
+
+html.light .bg-zinc-900\/40,
+html.light .bg-zinc-900\/50,
+html.light .btn-ghost {
+  background-color: #f1f5f9 !important;
+  border-color: #e2e8f0 !important;
+  color: #334155 !important;
+}
+
+/* Text Overrides */
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+html.light .text-white,
+html.light .text-zinc-100 {
+  color: #0f172a !important;
+}
+
+html.light .text-zinc-300,
+html.light .text-zinc-400,
+html.light .text-zinc-500,
+html.light .text-zinc-350 {
+  color: #475569 !important;
+}
+
+/* Border Overrides */
+html.light .border-zinc-800,
+html.light .border-zinc-800\/80,
+html.light .border-zinc-850,
+html.light .border-zinc-900 {
+  border-color: #cbd5e1 !important;
+}
+
+/* Dropdown Menu styling */
+html.light .dropdown-content {
+  background-color: #ffffff !important;
+  border-color: #e2e8f0 !important;
+  color: #334155 !important;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1) !important;
+}
+
+html.light .dropdown-content a {
+  color: #334155 !important;
+}
+
+html.light .dropdown-content a:hover {
+  background-color: #f1f5f9 !important;
+}
+
+/* Problem Cards */
+html.light .bg-zinc-900\/30:hover {
+  border-color: #6366f1 !important;
+  background-color: #ffffff !important;
+  box-shadow: 0 10px 25px -5px rgba(99, 102, 241, 0.1) !important;
+}
+
+/* Badge Contrast Overrides in Light Mode */
+html.light .text-purple-400 {
+  color: #6d28d9 !important;
+}
+html.light .bg-purple-950\/40 {
+  background-color: #f5f3ff !important;
+  color: #6d28d9 !important;
+  border-color: #ddd6fe !important;
+}
+
+html.light .text-emerald-400 {
+  color: #047857 !important;
+}
+html.light .bg-emerald-500\/10 {
+  background-color: #ecfdf5 !important;
+  border-color: #a7f3d0 !important;
+}
+
+html.light .text-amber-400 {
+  color: #b45309 !important;
+}
+html.light .bg-amber-500\/10 {
+  background-color: #fffbeb !important;
+  border-color: #fde68a !important;
+}
+
+html.light .text-rose-400 {
+  color: #be123c !important;
+}
+html.light .bg-rose-500\/10 {
+  background-color: #fff1f2 !important;
+  border-color: #fecdd3 !important;
+}
