@@ -266,6 +266,28 @@ AlgoSphere/
 
 ---
 
+## 🛠️ Engineering Challenges
+
+Building **AlgoSphere** required solving several complex, production-grade technical challenges:
+
+### 1. Silent Form Validation Blocks (Legacy Schemas)
+* **Challenge**: The legacy database records had irregular spelling formats (`dscription`, `difficultylevel`, `tag`, `initalCode`, `refrenceSolution`). Compiling these schemas with strict, case-sensitive front-end validations (Zod enums) caused update actions to block silently on loading.
+* **Solution**: Developed a case-insensitive normalizer inside the form loading lifecycle. This utility maps lowercase values (like `cpp`) to strict Zod enums (like `C++`) and auto-fills missing template slots with clean placeholders on the fly.
+
+### 2. CORS Preflight Blocks on Direct Uploads (Cloudinary)
+* **Challenge**: Uploading video editorials directly to Cloudinary triggered CORS blocks because default Axios configurations attached credential cookies and auth headers that Cloudinary's servers rejected during preflight.
+* **Solution**: Designed an isolated, clean Axios instance exclusively for Cloudinary uploads, stripping out global authorization headers.
+
+### 3. Monaco Editor Mount Crash Prevention
+* **Challenge**: Rapidly toggling tabs or editing page mounts caused Monaco Editor instances to crash because the parent DOM components unmounted before the asynchronous Monaco loader completed.
+* **Solution**: Implemented structured loading flags (`isLoading`) in the React lifecycle to ensure editor containers are fully mounted before Monaco rendering is triggered.
+
+### 4. Contrast Readability in Theme Overrides
+* **Challenge**: Toggling the application to light mode created low-contrast, unreadable text on dark-themed components (like points pills and green/amber solved status labels).
+* **Solution**: Designed a global CSS variables hierarchy using Tailwind v4 custom class overrides that swap opacity values to high-contrast colors dynamically.
+
+---
+
 ## ⚙️ Installation & Local Setup
 
 ### 1. Clone the repository
