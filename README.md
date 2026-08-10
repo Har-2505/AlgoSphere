@@ -47,6 +47,32 @@ AlgoSphere is a premium, full-stack online coding judge platform that allows dev
 
 ---
 
+## 📐 System Architecture
+
+This diagram shows how different components and services interact within **AlgoSphere**:
+
+```mermaid
+graph TD
+    User([Developer / User]) <-->|Interacts| FE[React Frontend]
+    FE <-->|API Requests| BE[Express Backend]
+    
+    subgraph Databases & Cache
+        BE <-->|Mongoose Models| DB[(MongoDB Atlas)]
+        BE <-->|Caching & Session| RD[(Redis Cache)]
+    end
+    
+    subgraph Third Party Services
+        BE -->|Compile & Run Code| JC[Judge0 / Piston Compiler]
+        BE -->|Upload Video Editorials| CL[Cloudinary Video CDN]
+    end
+    
+    JC -->|Execute Code| TC{Test Cases}
+    TC -->|Return Results| BE
+    CL -->|Serve Editorial Player| FE
+```
+
+---
+
 ## ⚙️ Installation & Local Setup
 
 ### 1. Clone the repository
