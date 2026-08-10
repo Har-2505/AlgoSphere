@@ -2,6 +2,19 @@
 
 AlgoSphere is a premium, full-stack online coding judge platform that allows developers to solve algorithm challenges, compile and run code in real-time, trace their submission statistics, climb a global leaderboard, and review video solution editorials.
 
+## 📸 Visual Preview
+
+### Practice Lobby (Homepage)
+![Practice Playground Lobby](assets/screenshots/homepage.png)
+
+### Global Leaderboard (High Contrast Light/Dark Mode Toggle)
+![Global Leaderboard Podium](assets/screenshots/leaderboard.png)
+
+### Authentication Portals
+| Login Page | Signup Page |
+| :---: | :---: |
+| ![Login Gate](assets/screenshots/login.png) | ![Signup Gate](assets/screenshots/signup.png) |
+
 ---
 
 ## 🚀 Key Features
