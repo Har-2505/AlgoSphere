@@ -1,6 +1,15 @@
 # 🌌 AlgoSphere
 
+![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Tailwind](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Node](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+
 AlgoSphere is a premium, full-stack online coding judge platform that allows developers to solve algorithm challenges, compile and run code in real-time, trace their submission statistics, climb a global leaderboard, and review video solution editorials.
+
+> [!TIP]
+> **Dynamic theme toggling** is supported globally. Use the Sun/Moon icons in the toolbar to switch layouts and synchronize the Monaco Editor theme instantly!
 
 ## 📸 Visual Preview
 
@@ -182,3 +191,6 @@ npm run dev
 ## 🔒 Security Best Practices
 * **No Hardcoded Secrets**: All database strings, JWT keys, and third-party credentials are managed strictly through `.env` configurations.
 * **Environment Files Ignored**: `.env` is listed inside `.gitignore` to prevent secret leaks on public repositories.
+
+> [!CAUTION]
+> Never push your local `.env` file or any credentials to public GitHub repositories. Keep database connections secure by using system environment variables.
