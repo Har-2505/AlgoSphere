@@ -210,6 +210,16 @@ erDiagram
 
 ---
 
+## ⚡ Caching & Performance (Redis)
+
+To handle high traffic and resource-intensive actions, **AlgoSphere** integrates a self-hosted Redis instance for database optimization and queue caching:
+
+* **Leaderboard Caching**: Calculating global developer rankings requires Mongoose aggregates to scan all user records, compute points, and sort rankings. To avoid overloading MongoDB, these aggregated ranks are cached in Redis for 5 minutes, allowing near-instantaneous page reloads.
+* **Sandboxed Execution Queue**: Compiling code inside Judge0/Piston sandboxes is a resource-heavy action. Redis handles task queues to safely throttle execution requests, protecting compilation servers from concurrent CPU spikes.
+* **Rate Limiting Protection**: Tracks request frequencies by IP address/user sessions to prevent API spamming on "Run Code" compilation endpoints.
+
+---
+
 ## 📂 Project Structure
 
 Below is the directory tree mapping showing the file structure of both the `client` and `server` folders in **AlgoSphere**:
