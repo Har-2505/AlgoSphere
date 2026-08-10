@@ -99,6 +99,17 @@ graph TD
     CL -->|Serve Editorial Player| FE
 ```
 
+### Architectural Flow Explanation:
+
+1. **Client-Side (React)**: Represents the developer workspace. It renders the Monaco code editor, handles timing states, and makes API calls to compile code, verify login status, or fetch scores.
+2. **Server-Side (Express)**: Orchestrates routes, enforces JWT cookies authentication, and handles communication with secondary services.
+3. **Database & Cache (MongoDB / Redis)**:
+   * **MongoDB Atlas** stores permanent entities (Users, Problems, Submissions).
+   * **Redis Cache** caches frequently read dashboards (like Leaderboard positions) to guarantee fast access speeds.
+4. **Third-Party Compilers & Storage**:
+   * **Piston Compiler** runs code submissions in isolated sandboxes and checks against visible/hidden test cases.
+   * **Cloudinary** holds solution editorials videos, streaming them directly to the client's workspace.
+
 ---
 
 ## 📂 Project Structure
