@@ -7,8 +7,14 @@ AlgoSphere is a premium, full-stack online coding judge platform that allows dev
 ### Practice Lobby (Homepage)
 ![Practice Playground Lobby](assets/screenshots/homepage.png)
 
+### User Profile Analytics Dashboard (Apple rings & GitHub heatmap)
+![User Profile Analytics Dashboard](assets/screenshots/profile.png)
+
 ### Global Leaderboard (High Contrast Light/Dark Mode Toggle)
 ![Global Leaderboard Podium](assets/screenshots/leaderboard.png)
+
+### Admin Management Control Panel
+![Admin Management Panel](assets/screenshots/admin_panel.png)
 
 ### Authentication Portals
 | Login Page | Signup Page |
