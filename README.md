@@ -288,6 +288,21 @@ Building **AlgoSphere** required solving several complex, production-grade techn
 
 ---
 
+## 🧪 Testing Strategy
+
+AlgoSphere uses a multi-layered testing workflow to guarantee secure user access and reliable code execution sandbox operations:
+
+### 1. Backend Integration Tests
+* **Authentication Guards**: Validates registration constraints, logins, and asserts that JWT access signature cookies correctly block unauthorized queries on profile stats and leaderboard endpoints.
+* **Sandbox Verification**: Runs mock compilations against `POST /submission/run` and `POST /submission/submit` to ensure code execution routes correctly format stdin payloads for the Piston runtime backend.
+* **Points Tally Audits**: Validates that successful submission updates correctly increment the database `points` counters (Easy = 10pts, Medium = 30pts, Hard = 100pts).
+
+### 2. Frontend Validation Tests
+* **Zod Input Verification**: Asserts enums case-matching (e.g., normalizes lowercase database types to exact frontend Zod schemas like `C++`, `Java`, `JavaScript`) to block empty or invalid form submissions.
+* **UI State Controls**: Verifies component lifecycles, ensuring the Monaco Editor mounts cleanly and that coding stopwatch play, pause, and hide features toggle values correctly in the workspace.
+
+---
+
 ## ⚙️ Installation & Local Setup
 
 ### 1. Clone the repository
