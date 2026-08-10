@@ -11,6 +11,19 @@ AlgoSphere is a premium, full-stack online coding judge platform that allows dev
 > [!TIP]
 > **Dynamic theme toggling** is supported globally. Use the Sun/Moon icons in the toolbar to switch layouts and synchronize the Monaco Editor theme instantly!
 
+---
+
+## ❓ Why AlgoSphere?
+
+Traditional coding platforms often present a steep learning curve and lack personalized, interactive resources. **AlgoSphere** was built to solve these gaps by creating a premium, self-hosted coding ecosystem:
+
+* **Interactive AI Assistance**: Avoid getting stuck. AlgoSphere features an integrated AI Chat Assistant directly in the workspace to explain algorithm constraints, debug syntax issues, and provide conceptual hints.
+* **Apple Watch-Style Progress Rings**: Simple percentages are boring. AlgoSphere translates coding milestones into Apple-style concentric Rings and weekly contribution Heatmaps, giving developers a tactile, rewarding sense of completion.
+* **Gamified Leaderboards**: Climbing a visual Gold/Silver/Bronze crown podium keeps users engaged and fosters friendly competition.
+* **Direct Video Solution Editorials**: Instead of forcing developers to leave the platform to search YouTube, administrators can host direct explanation videos right next to the code editor.
+
+---
+
 ## 📸 Visual Preview
 
 ### Practice Lobby (Homepage)
